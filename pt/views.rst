@@ -33,22 +33,22 @@ para o público. Caso você prefira usar uma linguagem de *template* como
 Twig ou Smarty, uma subclasse da *View* irá fazer uma ponte entre
 sua linguagem de *template* e o CakePHP.
 
-Arquivos do tipo *view* são guardados em ``/app/View/``, dentro do
+Arquivos de Templatem são guardados em ``src/Template``, dentro do
 diretório com o nome do *controller* que usa os arquivos e nomeado
 de acordo com a ação correspondente. Por exemplo, a ação “view()”
 do *controller* *Products* será normalmente encontrada em
-``/app/View/Products/view.ctp``.
+``/src/Template/Products/view.ctp``.
 
 A camada *view* no CakePHP pode ser composta de diferentes partes.
 Cada parte tem diferentes usos e serão cobertas em seções específicas:
 
-- **views**: *views* é a única parte da página que está em execução.
+- **views**: Template é a única parte da página que está em execução.
   Compõem a parte crucial da resposta da aplicação.
 
 - **elements**: pedaços de código pequenos e reutilizáveis.
   *Elements* geralmente são renderizados dentro de *views*.
 
-- **layouts**: arquivos da *view* contendo código de apresentação
+- **layouts**: arquivos de Templates contendo código de apresentação
   que envolve várias interfaces da aplicação. A maior parte dos
   arquivos *views* é renderizada dentro de um *layout*.
 
@@ -57,6 +57,10 @@ Cada parte tem diferentes usos e serão cobertas em seções específicas:
   podem ajudá-lo a construir formulários, construir funcionalidade
   AJAX, paginar dados do *model*, prover *feeds* RSS, dentre outras
   coisas.
+
+- **cells**: Essas classes fornecem funcionalidades como um mini controller
+criação de auto conteúdo na interface do usuário. Consulta a documentação 
+*view cells* para obter mais informações.
 
 .. _extending-views:
 
